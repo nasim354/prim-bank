@@ -1,0 +1,9 @@
+body{
+    padding:100px;
+}
+.SignUp{
+    padding:30px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 30px gray;
+    border-radius:10px;
+}
