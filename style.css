@@ -6,4 +6,37 @@ body{
     margin-top: 50px;
     box-shadow: 10px 10px 30px gray;
     border-radius:10px;
+    /* background-color: rgba(243, 225, 194,.2); */
+
+}
+span{
+    color:rgb(243, 174, 89);
+}
+#Next-Area{
+    display: none;
+}
+
+.box-1{
+    background-color: rgb(82, 170, 155);
+    border-radius: 10px;
+    padding:10px;
+    margin:10px;
+    font-family: Century;
+}
+.box-2{
+    background-color: rgb(242, 136, 136);
+    border-radius: 10px;
+    padding:10px;
+    margin:10px;
+    font-family: Century;
+}
+.box-3{
+    background-color: rgb(213, 101, 217);
+    border-radius: 10px;
+    padding:10px;
+    margin:20px;
+    font-family: Century;
+}
+#box{
+    font-family:Century;
 }

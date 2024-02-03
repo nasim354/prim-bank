@@ -6,27 +6,71 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>prim-bank</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="website icon" href="./imegs/logo-1.png">
 
 </head>
 <body>
-    <div class="contanier">
+    <div id="login-area" class="contanier">
        <div class="text">
-         <h1 class="text-center">Welcome to prim-bank</h1>
+         <h1 class="text-center">Welcome <span>to</span> prim-bank</h1>
        </div>
        <div id="SignUp" class="SignUp">
             <h4 class="text-center">Login</h4>
             <input class="form-control" type="text" placeholder="User Name"> <br>
-            <input class="form-control" type="password" placeholder="password"> <br>
-            <button id="submit" class="btn btn-primary">Submit</button>
+            <input type="password" placeholder="password" class="form-control"> <br>
+            <button id="loginBtn" class="btn btn-primary">Submit </button>
 
         </div>
     </div>
+    <div id="Next-Area" class="contanier">
+       <div class="row">
+        <div class="col-md-4">
+           <div class="box-1">
+                <h4>Deposit</h4>
+                <h1>$00</h1>
+           </div>
+        </div>
+        <div class="col-md-4">
+            <div class="box-2">
+                <h4>Withdraw</h4>
+                <h1>$00</h1>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="box-3">
+                <h4>Balance</h4>
+                <h1>$1200</h1>
+            </div>
+        </div>
+       </div>
+
+       <div id="box">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="SignUp">
+                    <h2 class="text-center">Deposit</h2> <br>
+                    <input class="form-control" type="text" placeholder="$ Amount add deposit"> <br>
+                    <button class="btn btn-primary">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+               <div class="SignUp">
+                    <h2 class="text-center">Withdraw</h2> <br>
+                    <input class="form-control" type="text" placeholder="$ Amount add withdraw"> <br>
+                    <button class="btn btn-primary">Withdraw</button>
+               </div>
+            </div>
+        </div>
+       </div>
+    </div>
     <script>
-       const button = document.getElementById("submit");
-       button.addEventListener("click",function(){
-        const signUp = document.getElementsById("signUp")
-        signUp.style.display = "none"
-       })
+    const buttonArea = document.getElementById("loginBtn");
+        buttonArea.addEventListener("click", function(){
+            const fullArea = document.getElementById("login-area");
+            fullArea.style.display = "none";
+    const nextItem = document.getElementById("Next-Area");
+         nextItem.style.display = "block";
+        })
     </script>
 </body>
 </html>
