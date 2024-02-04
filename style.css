@@ -17,7 +17,7 @@ span{
 }
 
 .box-1{
-    background-color: rgb(82, 170, 155);
+    background-color: rgb(95, 224, 202);
     border-radius: 10px;
     padding:10px;
     margin:10px;
@@ -34,9 +34,34 @@ span{
     background-color: rgb(213, 101, 217);
     border-radius: 10px;
     padding:10px;
-    margin:20px;
+    margin:10px;
     font-family: Century;
 }
 #box{
     font-family:Century;
+}
+.high{
+    background: linear-gradient( to right, rgb(0, 168,253) #fff 35%, #e00a95);
+    background-size: 200% auto;
+    -webkit-background-composite:text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
+}
+
+.text{
+     background: -webkit-linear-gradient(left, rgb(103, 232, 96) , yellow);
+     background: -o-linear-gradient(right, rgb(239, 178, 178), yellow);
+     background: -moz-linear-gradient(right, rgb(201, 36, 36), yellow);
+     background: linear-gradient(to right, red , rgb(255, 255, 0)); 
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    
+  }
+.color {
+    background: -webkit-linear-gradient(#eee 5%, #333 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+h4{
+    color:rgb(104, 81, 81);
 }
