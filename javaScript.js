@@ -6,30 +6,39 @@
     const nextItem = document.getElementById("Next-Area");
          nextItem.style.display = "block";
         })
-    // next healer
+    // Deposit handler.
     const  deposit = document.getElementById("addDeposit");
         deposit.addEventListener("click", function(){
-            const amountA =document.getElementById("Amount").value;
+            const amountA =document.getElementById("addAmount").value;
             const amountNumber = parseFloat(amountA);
-            const currentB = document.getElementById("current").innerText;
-            const currentNumber =parseFloat(currentB);
-            const totalNumber = amountNumber + currentNumber;
-            document.getElementById("current").innerText = totalNumber;
+            updateText("current",amountNumber)
+            updateText("total", amountNumber);
+           
 
-            const total = document.getElementById("total").innerText;
-            const totalBalance = parseFloat(total);
-            const mainBalance = amountNumber + totalBalance;
-            document.getElementById("total").innerText = mainBalance ;
-
-            document.getElementById("Amount").value = "";
+            document.getElementById("addAmount").value = "";
             
         })
-        const addWithdraw = document.getElementById("addWithdraw");
-            addWithdraw.addEventListener("click",function(){
-                const disAmount = document.getElementById("disAmount").value;
-                const disBalance = parseFloat(disAmount);
-                const disValue = totalBalance - disBalance;
-                document.getElementById("disAmount").value = disValue;
+        function updateText(id, amountNumber){
+            const total = document.getElementById(id).innerText;
+            const totalBalance = parseFloat(total);
+            const mainBalance = amountNumber + totalBalance;
+            document.getElementById(id).innerText = mainBalance ;
+        }
 
+        //withdraw handler
+    const addWithdraw = document.getElementById("addWithdraw");
+            addWithdraw.addEventListener("click", function(){
+               const disNumber = document.getElementById("disAmount").value;
+                const disNumberBalance = parseFloat(disNumber);
+               updateText("current1", disNumberBalance);
+               updateText("total", -1* disNumberBalance);
                 document.getElementById("disAmount").value = "";
             })
+            
+        function getInputNumber(id){
+            const disAmount = document.getElementById(id).value;
+            const disBalance = parseFloat(disAmount);
+            return disNumber;
+        }
+
+    
